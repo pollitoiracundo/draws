@@ -1,0 +1,62 @@
+
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+  <title>Talk logs</title>
+  <link rel="stylesheet" href="http://preguntas.midatacredito.com/chat/bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="http://preguntas.midatacredito.com/chat/bower_components/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="http://preguntas.midatacredito.com/chat/css/style.css">
+  <script type="text/javascript" src="http://preguntas.midatacredito.com/chat/bower_components/jquery/dist/jquery.min.js"></script>
+  <script type="text/javascript" src="http://preguntas.midatacredito.com/chat/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="http://preguntas.midatacredito.com/chat/bower_components/firebase/firebase.js"></script>
+  <script type="text/javascript" src="log.js"></script>
+</head>
+<body id="log">
+
+  <div class="container">
+    <div class="jumbotron">
+      <h1>Registros de conversación</h1>
+      <p>
+      Esta página rastrea las nuevas conversaciones en tiempo real por su sesión, Al hacer clic en uno, se abrirá la conversación en un cuadro de diálogo modal, donde podrá ver nuevas interacciones llegar en tiempo real. 
+      </p>
+      <div id="convo">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>client_name</th>
+              <th>sessionid</th>
+            </tr>
+          </thead>
+          <tbody id="sessions" />
+        </table>
+      </div>
+    </div>
+  </div>
+  
+  
+
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+          <h4 class="modal-title" id="sessionId"></h4>
+          <h4 class="modal-title" id="clientName"></h4>
+        </div>
+        <div class="modal-body"></div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <footer>
+    <div class="container">
+      
+    </div>
+  </footer>
+</body>
+</html>
